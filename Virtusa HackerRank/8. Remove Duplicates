@@ -1,0 +1,65 @@
+PROGRAM 1: (ALL Test case pass)
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		sc.nextLine();
+		String d = sc.nextLine();
+		String array[] = d.split(" ");
+		TreeSet<Integer> set = new TreeSet<Integer>();
+		for(int i=0;i<n;i++){
+		    set.add(Integer.parseInt(array[i]));
+		}
+		String s="";
+		for(int i:set){
+		    s+=i+" ";
+		}
+		System.out.println(s);
+	}
+}
+
+
+
+PROGRAM 2: (2/6 testcase pass)
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+         int n = sc.nextInt();
+         int array[] = new int[n];
+         for(int i=0;i<n;i++){
+             array[i] = sc.nextInt();
+         }
+         Set<Integer> set = new HashSet<Integer>();
+         for(int i=0;i<n;i++){
+             set.add(array[i]);
+         }
+         String s="";
+         for(Integer i:set){
+             s+=i+" ";
+         }
+         System.out.println(s);
+	}
+}
+
+
+/*
+
+INPUT
+6
+1 1 2 2 3 3
+
+OUTPUT:
+1 2 3
+
+*/
+
+
+
