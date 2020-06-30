@@ -1,0 +1,42 @@
+NOTE: PROGRAMMING LANGUAGE (JAVA SCRIPTS)
+
+function minimumSwaps(popularity){
+    var swaping=0;
+	var n=popularity.length;
+    for(int i=0;i<n/2;i++){
+        var a=popularity[i];
+		popularity[i]=popularity[n-i-1];
+		popularity[n-i-1]=a;
+	} 
+    var i=0;
+    while(i<popularity.length){
+        if(popularity[i]!=i+1){
+            while(popularity[i]!=i+1){
+                var current;
+		        current=popularity[popularity[i]-1];
+		        popularity[popularity[i]-1]=popularity[i];
+                popularity[i]=current;
+                swapping=swapping+1;
+		    }
+        }
+	    i=i+1;
+	}
+    return swapping;
+}
+
+
+/*
+n = 4
+popularity = [3, 4, 1, 2]
+Then Switch 3 and 4 to get popularity = [4, 3, 1, 2]
+Then Switch 1 and 2 to get [4, 3, 2, 1]
+The array is reordered in 2 operations
+
+INPUT:
+4
+3 4 1 2
+
+OUTPUT:
+2
+
+*/
