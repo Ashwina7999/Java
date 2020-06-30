@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+   public static void main(String args[]) {
+
+       int total,element,index,i;
+       ArrayList<Integer> array = new ArrayList<Integer>();
+       
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Total elements: ");
+       total = sc.nextInt();
+       
+       
+       System.out.print("Enter the elements\n");
+       for(i=0;i<total;i++){
+            element = sc.nextInt();      
+            array.add(element);
+       }
+       
+       System.out.println("Enter the index to remove:");
+       index = sc.nextInt();
+    
+       array.remove(index);
+
+       System.out.println("ArrayList After remove:");
+       for(Integer var2: array){
+            System.out.print(var2+" ");
+       }
+    }
+}
+
+/*
+
+INPUT:
+5
+4 1 1 2 3
+3
+
+OUTPUT:
+4 1 1 3
+
+*/
