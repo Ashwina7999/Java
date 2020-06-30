@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		for(int i=0;i<n;i++){
+		    array.add(sc.nextInt());
+		}
+	    Collections.sort(array);
+	    String s="";
+	    for(int i:array){
+	        s+=i+" ";
+	    }
+	    System.out.print(s);
+	}
+}
+
+/*
+
+INPUT:
+10 19 93 79 35 27 19 86 87 18
+
+OUTPUT:
+18 19 19 27 35 66 79 86 87 93
+
+*/
+
+
