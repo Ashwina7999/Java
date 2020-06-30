@@ -1,0 +1,87 @@
+PROGRAM 1:  1 test case fail
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String value = sc.nextLine();
+		char array[] = value.toCharArray();
+		String s="";
+		for(int i=0;i<array.length-1;i++){
+		    if(array[i]!=array[i+1]){
+		        s+=array[i];
+		    }
+		}
+		if(array[array.length-1]!=array[array.length-2]){
+		    s+=array[array.length-1];
+		}
+		if(array[array.length-1]>='a' && array[array.length-1]<='z'){
+		    ;
+		}
+		else{
+		    s+=array[array.length-1];
+		}
+		System.out.print(s);
+	}
+}
+
+
+
+PROGRAM 2
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String value = sc.nextLine();
+		String array[] = value.split(" ");
+		for(int i=0;i<array.length;i++){
+		    String s="";
+		    if(array[i].length()>1){
+		        for(int j=0;j<array[i].length()-1;j++){
+    		        if(array[i].charAt(j)!=array[i].charAt(j+1)){
+    		            s+=array[i].charAt(j);
+    		        }
+    		    }
+    		    s+=array[i].charAt(array[i].length()-1);
+    		    System.out.print(s+" ");
+		    }
+		    else{
+		        System.out.print(array[i]+" ");
+		    }
+		    
+		}
+	}
+}
+
+
+/*
+
+TEST CASE 1:
+INPUT:
+Book of Geeks at School
+
+OUTPUT:
+Bok of Geks at Schol
+
+
+TEST CASE 2:
+INPUT:
+Common Programming Questions in C++
+
+OUTPUT:
+Comon Programing Questions in C+
+
+
+TEST CASE 3:
+INPUT:
+Channelled Buffered %%
+
+OUTPUT:
+Chaneled Bufered %
+
+*/
