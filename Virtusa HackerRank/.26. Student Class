@@ -1,0 +1,36 @@
+Class Student{
+    public static int ID = 1;
+    String student_name;
+    
+    public Student(String student_name){
+        this.student_name = student_name;
+    }
+    
+    public String toString(){
+        int i = ID;
+        ID++;
+        return Integer.toString(i)+": "+student_name;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+
+
+/*
+
+INPUT:
+3
+Pat
+Sam
+Chris
+
+OUTPUT:
+1: Pat
+2: Sam
+3: Chris
+
+*/
