@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int array[] = new int[n];
+		for(int i=0;i<n;i++){
+		    array[i] = sc.nextInt();
+		}
+		
+		int minimum = Integer.MIN_VALUE;
+		int var=0;
+		for(int i=0;i<n;i++){
+		    var+=array[i];
+		    if(minimum<var){
+		        minimum = var;
+		    }
+		    if(var<0){
+		        var=0;
+		    }
+		}
+		System.out.println(minimum);
+	}
+}
+
+/*
+INPUT:
+5
+1
+2
+3
+4
+-10
+
+OUTPUT:
+10
+
+*/
