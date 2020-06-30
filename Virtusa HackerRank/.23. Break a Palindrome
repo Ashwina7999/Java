@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String palindromestr = sc.nextLine();
+		char array[] = palindromestr.toCharArray();
+		for(int i=0;i<array.length;i++){
+		    int j = array.length-i-1;
+		    if(i!=j){
+		        if(array[i]!='a'){
+		            array[i]='a';
+		            return String.valueOf(array);
+		        }
+		    }
+		    else{
+		        return "IMPOSSIBLE";
+		    }
+		}
+		return "IMPOSSIBLE";
+	}
+}
+
+
+/*
+
+TEST CASE 1:
+INPUT:
+bab
+
+OUTPUT:
+aab
+
+
+TEST CASE 2:
+INPUT:
+aaa
+
+OUTPUT:
+IMPOSSIBLE
+
+
+TEST CASE 3:
+INPUT:
+a
+
+OUTPUT:
+IMPOSSIBLE
+
+*/
